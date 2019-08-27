@@ -17,6 +17,7 @@ function findBy(filter) {
 }
 
 async function add(user) {
+    console.log('inside auth-model.js')
     const [id] = await db('users').insert(user);
 
     return findById(id);
