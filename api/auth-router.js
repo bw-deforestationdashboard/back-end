@@ -63,7 +63,7 @@ const secrets = require('../config/secrets.js')
                     const token = generateToken(user);
                 
 
-                    res.status(200).json({ message: `Welcome ${user.username}!`, token });
+                    res.status(200).json({ message: `Welcome ${user.username}!`, token, user });
                 } else {
                     res.status(401).json({ message: "You shall not pass!" });
                 }
