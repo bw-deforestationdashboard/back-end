@@ -28,7 +28,7 @@ router.put('/users/:id', (req, res) => {
 router.delete('/users/:id', (req, res) => {
     let deleteUser = req.params.id;
 
-    Contacts.remove(deleteUser)
+    Users.remove(deleteUser)
         .then(deleted => {
             res.status(201).json(deleted);
         })
